@@ -33,7 +33,7 @@ public class UserServicesImpl implements UserService {
 
 	@Transactional
 	@Override
-	@Secured("ROLE_ADMIN")
+	
 
 	public MessageResponse save(User user) {
 
@@ -64,7 +64,7 @@ public class UserServicesImpl implements UserService {
 	@Transactional
 	@Override
 	
-	@Secured("ROLE_USER")
+
 	public MessageResponse update(User user) {
 		boolean exist = contactRepository.existsByEmailAndId(user.getEmail(), user.getId());
 

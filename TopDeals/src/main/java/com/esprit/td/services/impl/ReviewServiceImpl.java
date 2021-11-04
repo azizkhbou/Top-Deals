@@ -23,7 +23,6 @@ public class ReviewServiceImpl implements ReviewService{
 	
 	
 	@Override
-	@Secured({ "ROLE_ADMIN", "ROLE_USER" })
     public List<Review> retrieveAllReviews() {
 		// TODO Auto-generated method stub
 		
@@ -60,7 +59,6 @@ public class ReviewServiceImpl implements ReviewService{
 	}
 */
 	@Override
-	@Secured({ "ROLE_ADMIN", "ROLE_USER" })
 
 	public Review retrieveReview(int id) {
 		
@@ -71,7 +69,6 @@ public class ReviewServiceImpl implements ReviewService{
 	}
 
 	@Override
-	@Secured("ROLE_ADMIN")
 
 	public void deleteReview(int id) {
 		// TODO Auto-generated method stub
@@ -83,7 +80,6 @@ public class ReviewServiceImpl implements ReviewService{
 	}
 
 	@Override
-	@Secured("ROLE_ADMIN")
 
 	public int assignReview(Review review) {
 		// TODO Auto-generated method stub
@@ -94,7 +90,6 @@ public class ReviewServiceImpl implements ReviewService{
 	}
 
 	@Override
-	@Secured("ROLE_USER")
 
 	public void modifyReview(int id) {
 		// TODO Auto-generated method stub

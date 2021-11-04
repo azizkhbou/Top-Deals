@@ -24,7 +24,6 @@ public class StockServiceImpl implements StockService{
 
 
 	@Override
-	@Secured("ROLE_ADMIN")
 
 	public List<Stock> retrieveAll() {
 		// TODO Auto-generated method stub
@@ -38,7 +37,6 @@ public class StockServiceImpl implements StockService{
 	}
 
 	@Override
-	@Secured("ROLE_ADMIN")
 
 	public Stock addStock(Stock stock) {
 		// TODO Auto-generated method stub
@@ -49,7 +47,6 @@ public class StockServiceImpl implements StockService{
 	}
 
 	@Override
-	@Secured("ROLE_ADMIN")
 
 	public Stock retrieveStock(int id) {
 		
@@ -59,7 +56,6 @@ public class StockServiceImpl implements StockService{
 	}
 
 	@Override
-	@Secured("ROLE_ADMIN")
 
 	public Stock UpdateStock(Stock stock) {
 		
@@ -72,7 +68,6 @@ public class StockServiceImpl implements StockService{
 	}
 
 	@Override
-	@Secured("ROLE_ADMIN")
 
 	public void deleteStock(int id) {
 		// TODO Auto-generated method stub
@@ -84,7 +79,6 @@ public class StockServiceImpl implements StockService{
 	}
 
 	@Override
-	@Secured("ROLE_ADMIN")
 
 	public List<Stock> recupTypes() {
 		// TODO Auto-generated method stub

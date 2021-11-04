@@ -31,7 +31,7 @@ public class AdministratorServicesImpl implements AdministratorService {
 
 	@Transactional
 	@Override
-	@Secured("ROLE_ADMIN")
+
 	public MessageResponse save(Administrator administrator) {
 
 		boolean exist = accountRepository.existsByEmail(administrator.getEmail());
@@ -60,7 +60,6 @@ public class AdministratorServicesImpl implements AdministratorService {
 
 	@Transactional
 	@Override
-	@Secured("ROLE_ADMIN")
 
 	public MessageResponse update(Administrator administrator) {
 		boolean exist = accountRepository.existsByEmailAndId(administrator.getEmail(), administrator.getId());
@@ -86,7 +85,6 @@ public class AdministratorServicesImpl implements AdministratorService {
 
 	@Transactional
 	@Override
-	@Secured("ROLE_ADMIN")
 
 	public MessageResponse delete(Integer id) {
 		Administrator administrator = findById(id);
@@ -100,21 +98,18 @@ public class AdministratorServicesImpl implements AdministratorService {
 	}
 
 	@Override
-	@Secured("ROLE_ADMIN")
 
 	public List<Administrator> findAll() {
 		return administratorRepository.findAll();
 	}
 
 	@Override
-	@Secured("ROLE_ADMIN")
 
 	public Administrator findById(Integer id) {
 		return administratorRepository.findById(id).orElse(null);
 	}
     @Transactional
 	@Override
-	@Secured("ROLE_ADMIN")
 	public MessageResponse changePassword(PasswordRequest passwordRequest) {
     	Administrator user = administratorRepository.findByUsername(passwordRequest.getUsername());
     	if(user == null) {
